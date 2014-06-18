@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <!-- Customize your app and platform with the preference element. please uncomment requred configuration widget element and comment others -->
+
+  <!--AU Prod -->
+  <widget
+    id="com.dtz"
+    version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets" >
+
+
+  <preference
+      name="endPoint"
+      value="Endpoint=sb://au-prod-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=5/HPFXKVEtVpx9Nc9xuS+tI6EDDH7lm6euQiFWHdPLI=" />
+
+  <preference
+      name="senderId"
+      value="1016375591081" />
+
+  <preference
+      name="notificationHubPath"
+      value="auprodpushhub" />
+
+</widget>
+
+<!--AU Stag -->
+  <!--<widget
+    id="com.dtz"
+    version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets" >
+
+
+  <preference
+      name="endPoint"
+      value="Endpoint=sb://au-stag-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=h87TcTwpZzf94pXsrT1uVOLCSRR7JtKqBCajd8hK17Y=" />
+
+  <preference
+      name="senderId"
+      value="402027511468" />
+
+  <preference
+      name="notificationHubPath"
+      value="austagpushhub" />
+
+</widget>-->
+
+<!--Sg Prod -->
+  <!--<widget
+    id="com.dtz"
+    version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets" >
+
+
+  <preference
+      name="endPoint"
+      value="Endpoint=sb://sg-prod-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=wHo2OxG9LnUPAKX7t0ZKJMWXDVXDZ0eB+F60Mu0BCX8=" />
+
+  <preference
+      name="senderId"
+      value="982983826564" />
+
+  <preference
+      name="notificationHubPath"
+      value="sgprodpushhub" />
+
+</widget>-->
+
+<!--Sg Stag -->
+  <!--<widget
+    id="com.dtz"
+    version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets" >
+
+
+  <preference
+      name="endPoint"
+      value="Endpoint=sb://sg-stag-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=OOYRTvLMs98Rgg+7ZRfe/ajFwYB+fS8LWP/th9WUAy0=" />
+
+  <preference
+      name="senderId"
+      value="33373125734" />
+
+  <preference
+      name="notificationHubPath"
+      value="sgstagpushhub" />
+
+</widget>-->
+
+
+<!-- ex Dev-->
+<!--<widget
+    id="com.dtz"
+    version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets" >
+
+  <preference
+      name="endPoint"
+      value="Endpoint=sb://ex-dev-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=O49zc9h7YtcRMMRhmms+jcGo86bqJ5eD4dUlWrFoGcM=" />
+
+  <preference
+      name="senderId"
+      value="399467325868" />
+
+  <preference
+      name="notificationHubPath"
+      value="exdevpushhub" />
+
+</widget>-->
+
+<!-- 
+
+AU Prod
+Google Project Id : 1016375591081
+Google API Key : AIzaSyB3uBEGFhvUst5-SgFwmiR-AsYnZciMe2M
+ 
+Azure Hub Name : auprodpushhub
+DefaultListenSharedAccessSignature: 
+Endpoint=sb://au-prod-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=5/HPFXKVEtVpx9Nc9xuS+tI6EDDH7lm6euQiFWHdPLI=
+ 
+DefaultFullSharedAccessSignature:
+Endpoint=sb://au-prod-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=4LmGD8ONHZjCX0mRLZav8v+/nJQDYRvbGVZqF3JgV1M=
+ 
+ 
+ 
+AU Stag
+Google Project Id : 402027511468
+Google API Key : AIzaSyBw1SKgUdFKjRhSWiG4QrfOHYgOJwtK_qQ
+ 
+Azure Hub Name : austagpushhub
+DefaultListenSharedAccessSignature: 
+Endpoint=sb://au-stag-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=h87TcTwpZzf94pXsrT1uVOLCSRR7JtKqBCajd8hK17Y=
+ 
+DefaultFullSharedAccessSignature:
+Endpoint=sb://au-stag-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=0L1oO4IJ26L7LHUucwK0ZDuLDfnyNNeFDWekv+I0CPQ=
+
+
+
+
+Sg Prod
+Google Project Id : 982983826564
+Google API Key : AIzaSyBcR50Ph8A5MS7Z5bgfSl5CPGwZu3OyelY
+ 
+Azure Hub Name : sgprodpushhub
+DefaultListenSharedAccessSignature: 
+Endpoint=sb://sg-prod-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=wHo2OxG9LnUPAKX7t0ZKJMWXDVXDZ0eB+F60Mu0BCX8=
+ 
+DefaultFullSharedAccessSignature:
+Endpoint=sb://sg-prod-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=xRm9HTL5Kxv/jq2/ikTqIBUlqOQpPUpne5+3AsPdEyo=
+
+
+
+
+Sg Stag
+Google Project Id : 33373125734
+Google API Key : AIzaSyDMkXcloDiBMvvBoUeNRfuAxXftAqOxv0Y
+ 
+Azure Hub Name : sgstagpushhub
+DefaultListenSharedAccessSignature: 
+Endpoint=sb://sg-stag-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=OOYRTvLMs98Rgg+7ZRfe/ajFwYB+fS8LWP/th9WUAy0=
+ 
+DefaultFullSharedAccessSignature:
+Endpoint=sb://sg-stag-servicebus.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=7w4a8BtIaDA6OjGhFaUQ6cA+lXI+Jc38syPrFMIw+K0=
+
+
+ -->

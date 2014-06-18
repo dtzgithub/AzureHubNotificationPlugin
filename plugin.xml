@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.dtz.plugins.azurehubnotification"
+    version="1.0.1">
+
+    <name>AzureHubNotification</name>
+    <description>Provide mechanism to register for Azure Hub Notification.</description>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>    
+
+    <js-module src="www/azurehubnotification.js" name="AzureHubNotification">
+        <clobbers target="azurehubnotification" />
+    </js-module>  
+
+    <!-- android -->
+    <platform name="android">
+        <source-file src="src/android/com/dtz/plugins/azurehubnotification/AzureHubNotification.java" target-dir="src/com/dtz/plugins/azurehubnotification" />
+        <source-file src="src/android/com/dtz/plugins/azurehubnotification/NotificationHandler.java" target-dir="src/com/dtz/plugins/azurehubnotification" />
+        <source-file src="src/android/com/dtz/plugins/azurehubnotification/AzureConfig.java" target-dir="src/com/dtz/plugins/azurehubnotification" />
+        <source-file src="config_azure_hub.xml" target-dir="res/xml" />       
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AzureHubNotification">
+                <param name="android-package" value="com.dtz.plugins.azurehubnotification.AzureHubNotification" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <receiver
+            android:name="com.microsoft.windowsazure.notifications.NotificationsBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+				<intent-filter>
+					<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+					<category android:name="com.dtz.plugins.azurehubnotification" />
+				</intent-filter>
+			</receiver>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+                <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+                <uses-permission android:name="android.permission.WAKE_LOCK" />
+                <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+                <permission
+                    android:name="com.dtz.plugins.azurehubnotification.permission.C2D_MESSAGE"
+                    android:protectionLevel="signature" />
+
+                <uses-permission android:name="com.dtz.plugins.azurehubnotification.permission.C2D_MESSAGE" />
+        </config-file>
+
+        <source-file src="src/android/gcm.jar" target-dir="libs"/>
+        <source-file src="src/android/google-play-services.jar" target-dir="libs"/>
+        <source-file src="src/android/notification-hubs-0.2.jar" target-dir="libs"/>
+        <source-file src="src/android/notifications-1.0.1.jar" target-dir="libs"/>
+        <source-file src="src/android/android-support-v4.jar" target-dir="libs"/>
+    </platform>
+</plugin>

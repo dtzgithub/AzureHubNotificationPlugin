@@ -1,0 +1,55 @@
+Please Read before Intergrate this plugin to App
+
+1) Add this plugin to you project, execute following command
+	
+		<Cordova dir >cordova plugin add <Plugin dir>
+
+		$D:\DTZMobility.PhoneGap.V2\CordovaPrj>cordova plugin add D:\WorkDir\CordovaProject\com.dtz.plugins.azurehubnotification
+
+		to remove $cordova plugin rm com.dtz.plugins.azurehubnotification
+
+2) Register plugine with tags
+	 add this line to Device ready event "azurehubnotification.register(["dtzHub"]);"
+
+
+FOR ANDROID
+-----------------------------------------------------------------------------
+
+--Go to main launcher activity and do following modification inside onCreate Method
+
+	
+	   private static final String TAG = "DTZMobility";
+    @Override
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        super.init();
+        
+        String page=Config.getStartUrl();
+        Bundle bundle =getIntent().getExtras();
+        String action =getIntent().getAction();
+        
+        if(action!=null && action.equals("com.dtz.cordova.VIEW_WORK_ORDER")) {
+        	page=Config.getStartUrl();     	
+        	String workOrderId = "";
+			if(bundle!=null){
+        	 workOrderId =bundle.getString("WORK_ORDER_NO");
+        	}
+        	
+        	page=page+"?wo="+workOrderId;
+        }
+        // Set by <content src="index.html" /> in config.xml
+        super.loadUrl(page);
+        //super.loadUrl("file:///android_asset/www/index.html");
+    }
+--Then Edit AndroidManifest.xml file add following intent filter to launcher activity
+
+	<intent-filter>
+        <action android:name="com.dtz.cordova.VIEW_WORK_ORDER" />
+        <category android:name="android.intent.category.DEFAULT" />
+    </intent-filter>
+
+--To deal with notification data edit NotificationHandler class
+
+--Inside NotificationHandler you get json data as following
+{\"WorkOrderNumber\":\"WO91911\",\"Status\":\"Active\",\"Message\":\"Successful\",\"IsNewWorkOrder\": true,\"IsCompleted\": false,\"TrafficLight\": \"red\"}
