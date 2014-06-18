@@ -1,0 +1,13 @@
+{
+    "version": "1.0.0",
+    "name": "com.dtz.plugins.azurehubnotification",
+    "cordova_name": "AzureHubPlugin",
+    "description": "Cordova Push Notification Hub",
+    "license": "Apache 2.0",
+    "keywords": [
+        "cordova",
+        "phonegap",
+        "cookies"
+    ],
+    "engines": []
+}
